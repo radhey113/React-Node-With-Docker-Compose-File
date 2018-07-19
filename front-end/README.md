@@ -20,5 +20,3 @@
 5. Run `pm2 start application-prod-configuration.json` command.
 6. Now you can open production build at **localhost:3000/** on browser.
 
-# or
-1. Run 'npm run prod' to deploy code in production.
