@@ -1,0 +1,29 @@
+.loader{
+    width: 25px;
+    height: 25px;
+    border: 4px solid lightgrey;
+    border-bottom-color: green;
+    border-radius: 50%;
+    animation: rotate 1s infinite linear; 
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.black{
+    border-bottom-color: white;
+}
+
+.red{
+    border-bottom-color: red;
+}
+
+.primary{
+    border-bottom-color: rgb(40,75,140);
+}

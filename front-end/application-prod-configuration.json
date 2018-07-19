@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "name"      : "demand_supply_demo",
+      "script"    : "npx",
+      "interpreter" : "none",
+      "args"      : "serve -s build"
+    }
+  ]
+}

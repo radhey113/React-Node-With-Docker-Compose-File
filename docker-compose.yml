@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+  back:
+    container_name: demo-back-end
+    build:
+      context: ./back-end/
+      dockerfile: Dockerfile
+    volumes:
+      - ./back-end/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "4000:4000"
+    # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - CHOKIDAR_USEPOLLING=true
+  front:
+    container_name: demo-front-end
+    build:
+      context: ./front-end/
+      dockerfile: Dockerfile
+    volumes:
+      - ./front-end/:/usr/app
+      - ./front-end/node_modules/:/usr/app/node_modules
+    depends_on:
+      - back
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=${NODE_ENV}
