@@ -11,7 +11,7 @@ let Config = require('./server/config');
 
 /***********************************
  * Database conectinvity before ****
- ***** running server (www()) ******
+ ** running server (WWW.Server()) **
  ***********************************/
 WWW.DbConnection(Config.DbConfig.DBURL).then(resolve => {
     console.log(`*********DB is connected successfully*********`);
