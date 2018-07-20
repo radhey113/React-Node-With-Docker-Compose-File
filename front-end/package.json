@@ -39,6 +39,7 @@
     "react-dom": "^16.3.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.4",
     "resolve": "1.6.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -50,7 +51,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "react-scripts build",
     "test": "node scripts/test.js --env=jsdom",
     "prod": "npm install pm2 -g && npm install serve -g && npm run build && pm2 start application-prod-configuration.json",
     "dev": "npm start"

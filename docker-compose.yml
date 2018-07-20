@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.2'
 
 services:
   back:
@@ -22,10 +22,11 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./front-end/:/usr/app
-      - ./front-end/node_modules/:/usr/app/node_modules
+      - /usr/app/node_modules
+      - /usr/app/build
     depends_on:
       - back
     ports:
-      - '3000:3000'
+      - '5000:5000'
     environment:
       - NODE_ENV=${NODE_ENV}

@@ -535,17 +535,7 @@ let ERROR_MSG_CODE = [
 ];
 
 let CUSTOM_MSG = {
-  MANAGER_INCORRECT   : "This manager is not authorized for demand",
-  MANAGER_NOT_EXIST   : "Manager not exist",
-  DEMAND_ADDED        : "Demand has been successfully created",
-  SUPPLY_ADDED        : "Supply has been successfully created",
-  SUPPLY_ALIAS_EXISTS : "Supply alias already exist",
-  DEMAND_ALIAS_EXISTS : "Demand alias already exist",
-  SUPPLY_NAME_EXISTS  : "Supply name already exist",
-  DEMAND_NAME_EXISTS  : "Demand name already exist",
-  SUPPLY_EXIST        : "Supply already exist",
-  DEMAND_EXIST        : "Demand already exist",
-};
+  };
 
 
 let languageSpecificMessages = {
