@@ -58,9 +58,12 @@ To check/verify your environment variable `PORT` value, use command: `echo ${POR
 _**Note:** You need to open port 5000 from the server configurations to make it avaiable for users to use the `demo-front-end`. If you want to change/customize the port you can change the outisde port from the `front service` of `docker-compose.yml` file. Like if you want to configure `port 5001` the you need to replace the following lines:_
 
 ports:
+
     - '5000:5000'
 with the following lines:
+
 ports:
+
     - '5001:5000'
 
 Right now we are using default port of Back-End service as 4000. But in case if you will change/customize the port from the docker-compose.yml then you need to change that port in this constants file of front-end. (We have created the constants file to configure host and port). To change this, follow these steps:
