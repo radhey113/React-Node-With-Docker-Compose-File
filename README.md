@@ -49,7 +49,7 @@ Cammand: export `JWT_SECRET=<JWT-SECRET>` (`JWT_SECRET` for JWT Token)
 To check/verify your environment variable `JWT_SECRET` value, use command: `echo ${JWT_SECRET}`
 
 **_Steps to set Custom server PORT:_**
-Set environment variable `PORT` for server
+Set environment variable `SERVER_PORT` for server
 Cammand: export `SERVER_PORT=<SERVER-PORT>` (`SERVER_PORT` for server)
 To check/verify your environment variable `SERVER_PORT` value, use command: `echo ${SERVER_PORT}`
 
