@@ -11,11 +11,11 @@ const ClickButton = (props)=>{
     return (
         <FormGroup controlId="formHorizontalEmail" className="formGroup">
 
-            <Col sm={6} className="DropDownCol">
+            <Col sm={12} className="DropDownCol">
                 <Button
                     value={props.title}
-                    bsStyle="primary"
-                    type={props.type}
+                    bsStyle={props.sClass}
+                    onClick={props.changeTextColor}
                 >
                     {props.title}
                 </Button>

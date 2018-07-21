@@ -13,9 +13,10 @@ services:
       - "4000:4000"
     # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
     environment:
+#      - NODE_ENV=${NODE_ENV:?err} for making env mandatory
       - NODE_ENV=${NODE_ENV}
       - DB_CON_STR=${DB_CON_STR}
-      - PORT=${PORT}
+      - SERVER_PORT=${SERVER_PORT}
       - JWT_SECRET=${JWT_SECRET}
       - CHOKIDAR_USEPOLLING=true
   front:
@@ -33,3 +34,4 @@ services:
       - '5000:5000'
     environment:
       - NODE_ENV=${NODE_ENV}
+      - PORT=${CLIENT_PORT}

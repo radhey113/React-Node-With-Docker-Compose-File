@@ -4,8 +4,9 @@
  */
 export const ServerConnection = {
     host: '127.0.0.1',
-    port: process.env.port || 4000
+    port: process.env.SERVER_PORT || 4000
 };
+
 
 export const LoaderColors = {
     red: 'red',
