@@ -5,7 +5,7 @@
 let SERVER = {
   APP_NAME                      : "demo",
   TOKEN_EXPIRATION_IN_MINUTES   : 600,
-  JWT_SECRET_KEY                : "test_application_JWT_SECRET_KEY",
+  JWT_SECRET_KEY                : process.env.JWT_SECRET || "test_application_JWT_SECRET_KEY",
   GOOGLE_API_KEY                : "",
   COUNTRY_CODE                  : "+91",
   MAX_DISTANCE_RADIUS_TO_SEARCH : "1",

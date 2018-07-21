@@ -14,6 +14,9 @@ services:
     # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
     environment:
       - NODE_ENV=${NODE_ENV}
+      - DB_CON_STR=${DB_CON_STR}
+      - PORT=${PORT}
+      - JWT_SECRET=${JWT_SECRET}
       - CHOKIDAR_USEPOLLING=true
   front:
     container_name: demo-front-end
