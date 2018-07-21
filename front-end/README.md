@@ -1,4 +1,4 @@
-# Steps to setup frontend:
+# Steps to setup frontend seperately:
 
 1. Install **node.js** from https://nodejs.org/en/download/ if not installed.
 2. Goto **front-end** folder inside terminal.
@@ -10,7 +10,7 @@
 1. Run `npm start`.
 2. Automatically browser will open with '**localhost:3000/**'. If not you can write same on url.
 3. Goto **front-end/src/Constants/index.js** and change **BaseURL** variable to your server url. If you are using localhost, server url will be your **IP Address**.
-4. For custom port, change to in `package.json` : **"start": "PORT=8080 react-scripts start"**
+4. For custom port, change to in `package.json` : **"start": "PORT=5000 react-scripts start"**
 
 
 # For production build serving.
