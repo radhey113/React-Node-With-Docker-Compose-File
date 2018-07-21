@@ -68,8 +68,8 @@ ports:
 
 Right now we are using default port of Back-End service as 4000. But in case if you will change/customize the port from the docker-compose.yml then you need to change that port in this constants file of front-end. (We have created the constants file to configure host and port). To change this, follow these steps:
 
-**_Goto the path: front-end/src/Constants/index.js_**
-If you have changed the port in docker-compose.yml (i.e. changed the port otherthan 5000) then you need to set the configured port to the parameter port like if you have configured `4001` then you need to write: `port:"4001"`.
+**_Goto the path: `front-end/src/Constants/index.js`_**
+If you have changed the port in docker-compose.yml (i.e. changed the port otherthan 4000 for back) then you need to set the configured port to the parameter port like if you have configured `4001` then you need to write: `port:"4001"`.
 
 There is another parameter host is exposed. But we don't have to do anything untill we'll host our Back-End code separately on other server or domain from the `demo-front-end` code.
 
