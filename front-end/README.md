@@ -9,7 +9,7 @@
 # For development mode serving.
 1. Run `npm start`.
 2. Automatically browser will open with '**localhost:3000/**'. If not you can write same on url.
-3. Goto **front-end/src/Constants/index.js** and change **BaseURL** variable to your server url. If you are using localhost, server url will be your **IP Address**.
+3. Goto **front-end/src/Constants/ElmLoader.jsnd change **BaseURL** variable to your server url. If you are using localhost, server url will be your **IP Address**.
 4. For custom port, change to in `package.json` : **"start": "PORT=5000 react-scripts start"**
 
 

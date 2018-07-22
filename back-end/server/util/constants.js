@@ -438,7 +438,7 @@ let STATUS_MSG = {
     },
     ERROR_PROFILE_PIC_UPLOAD: {
       statusCode      : 400,
-      customMessage   : "Profile pic is not a valid file",
+      customMessage   : "Index pic is not a valid file",
       type            : "ERROR_PROFILE_PIC_UPLOAD"
     },
     PHONE_ALREADY_EXIST: {
