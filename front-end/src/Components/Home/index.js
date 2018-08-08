@@ -10,13 +10,28 @@ import Overlay from "../../UI/Loader/Overlay";
 
 export default class Home extends React.Component {
 
+    color = [];
+
     constructor(props){
 
         super(props);
         this.state = {
             sStyleClass: 'red',
-            display: 'block'
+            display: 'block',
+            color: 'white'
         };
+
+        this.color = [
+            'red',
+            'green',
+            'yellow',
+            'brown',
+            'blue',
+            'lightblue',
+            'black',
+            'orange',
+            'cyan'
+        ]
 
         setTimeout(() => {
             this.setState({display:"none"});
@@ -36,6 +51,11 @@ export default class Home extends React.Component {
         }
     }
 
+    replaceColor(index){
+        let color = prompt("Please enter your favourate color:", "lightblue");
+        this.color[index] = color;
+    }
+
 
     render() {
 
@@ -45,6 +65,15 @@ export default class Home extends React.Component {
         let BlueButton = <ClickButton title='Blue' sClass='primary' changeTextColor={this.changeColor.bind(this,'blue')}/>
         let OrangeButton = <ClickButton title='Orange' sClass='warning' changeTextColor={this.changeColor.bind(this,'orange')}/>
 
+        let elementRender = this.color.map((color, index) => {
+        
+            return (
+                <Page key={index} wraperClass="col-sm-4 col-md-4 minHeightWidth center-block" style={{"background-color":color}}  >
+                    {/* <button onclick={this.replaceColor(index)} >Replace {color} color</button> */}{color}
+                </Page>
+            )
+        
+        });    
 
         return (
             /** Common Page wraper **/
@@ -52,18 +81,9 @@ export default class Home extends React.Component {
             <Page wraperClass="container">
             {/*<Page wraperClass="container" style={{"background-color":"green"}}>*/}
 
-                {/*<Page wraperClass="container" style={{"background-color":"red"}}>*/}
-
-                    {/*<Page wraperClass="col-sm-6 col-md-6" style={{"background-color":"white"}}>*/}
-                        {/*hello buddy*/}
-                    {/*</Page>*/}
-                    {/*<Page wraperClass="col-sm-6 col-md-6" style={{"background-color": "blue"}}>*/}
-                        {/*<Page wrapperClass="col-sm-12 col-md-8" style={{"padding": "20px"}}>*/}
-                                {/*cool hun mai*/}
-                        {/*</Page>*/}
-                    {/*</Page>*/}
-
-                {/*</Page>*/}
+                <Page wraperClass="row">
+                    {elementRender}
+                </Page>
 
                 {/*My button work*/}
                 <Overlay hide={this.state.display} hideOverlay={this.endLoader.bind(this)}>

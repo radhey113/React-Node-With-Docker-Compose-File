@@ -29,5 +29,8 @@
     color: #245580;
 }
 
-
+.minHeightWidth{
+    min-width: 100px;
+    min-height: 100px;
+}
 
