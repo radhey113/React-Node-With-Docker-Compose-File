@@ -18,7 +18,7 @@ export default class Home extends React.Component {
         this.state = {
             sStyleClass: 'red',
             display: 'block',
-            color: 'white'
+            color: 'white',
         };
 
         this.color = [
@@ -27,10 +27,7 @@ export default class Home extends React.Component {
             'yellow',
             'brown',
             'blue',
-            'lightblue',
-            'black',
-            'orange',
-            'cyan'
+            'lightblue'
         ]
 
         setTimeout(() => {
@@ -66,10 +63,17 @@ export default class Home extends React.Component {
         let OrangeButton = <ClickButton title='Orange' sClass='warning' changeTextColor={this.changeColor.bind(this,'orange')}/>
 
         let elementRender = this.color.map((color, index) => {
-        
+            let classForChild = "size";
+            if(index % 2 == 0){
+                classForChild += " top";
+            }
+            console.log(classForChild);
             return (
-                <Page key={index} wraperClass="col-sm-4 col-md-4 minHeightWidth center-block" style={{"background-color":color}}  >
-                    {/* <button onclick={this.replaceColor(index)} >Replace {color} color</button> */}{color}
+                <Page key={index} wraperClass="col-sm-2 col-md-2 minHeightWidth center-block animated rubberBand" >
+                    <div className={classForChild} style={{"background-color":color}} >
+
+                    </div>
+                    {/* <button onclick={this.replaceColor(index)} >Replace {color} color</button>{color} */}
                 </Page>
             )
         
@@ -86,12 +90,12 @@ export default class Home extends React.Component {
                 </Page>
 
                 {/*My button work*/}
-                <Overlay hide={this.state.display} hideOverlay={this.endLoader.bind(this)}>
+                {/* <Overlay hide={this.state.display} hideOverlay={this.endLoader.bind(this)}>
 
                     <Loader/>
-                </Overlay>
+                </Overlay> */}
 
-                <div className={'row center-block'}>
+                {/* <div className={'row center-block'}>
                     <div className="container">
                             <h1 className={this.state.sStyleClass} >React With docker-compose </h1>
                     </div>
@@ -101,7 +105,7 @@ export default class Home extends React.Component {
                         {BlueButton}
                         {OrangeButton}
                     </div>
-                </div>
+                </div> */}
             </Page>
 
         ); 
