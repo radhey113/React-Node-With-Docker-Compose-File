@@ -70,7 +70,7 @@ export default class Home extends React.Component {
             console.log(classForChild);
             return (
                 <Page key={index} wraperClass="col-sm-2 col-md-2 minHeightWidth center-block animated rubberBand" >
-                    <div className={classForChild} style={{"background-color":color}} >
+                    <div className={classForChild} style={{"background-color":color}} onClick={this.changeColor.bind(this,color)}>
 
                     </div>
                     {/* <button onclick={this.replaceColor(index)} >Replace {color} color</button>{color} */}
@@ -90,12 +90,12 @@ export default class Home extends React.Component {
                 </Page>
 
                 {/*My button work*/}
-                {/* <Overlay hide={this.state.display} hideOverlay={this.endLoader.bind(this)}>
+                <Overlay hide={this.state.display} hideOverlay={this.endLoader.bind(this)}>
 
                     <Loader/>
-                </Overlay> */}
+                </Overlay>
 
-                {/* <div className={'row center-block'}>
+                <div className={'row center-block'}>
                     <div className="container">
                             <h1 className={this.state.sStyleClass} >React With docker-compose </h1>
                     </div>
@@ -105,7 +105,7 @@ export default class Home extends React.Component {
                         {BlueButton}
                         {OrangeButton}
                     </div>
-                </div> */}
+                </div>
             </Page>
 
         ); 
